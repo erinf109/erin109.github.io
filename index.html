@@ -45,7 +45,7 @@ function getMajorInfo(selected_major){
 	request.onload=function(){
 		var data=JSON.parse(request.responseText);
 		
-		var collect_major=data.filter(getMajor)
+		collect_major=data.filter(getMajor)
 		function getMajor(student){
 		return student.major==selected_major;
 		}
