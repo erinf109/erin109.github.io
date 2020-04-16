@@ -14,8 +14,8 @@
 <div class="container">
 <h2> Select a Major</h2>
 
-<button type='button' class="btn btn-primary" onClick="getMajorInfo('cit')">CIT Majors</button>
-<button type='button' class="btn btn-primary" onClick="getMajorInfo('bus')">Business Majors</button>
+<button type='button' class="btn btn-primary" onClick="getMajorInfo('CIT')">CIT Majors</button>
+<button type='button' class="btn btn-primary" onClick="getMajorInfo('BUS')">Business Majors</button>
 
 </div>
 
@@ -45,9 +45,10 @@ function getMajorInfo(selected_major){
 	request.onload=function(){
 		var data=JSON.parse(request.responseText);
 		
-		collect_major=data.filter(getMajor)
-		function getMajor(major){
-		return item.major==selected_major;
+		var collect_major=data.filter(getMajor)
+		function getMajor(student){
+		return student.major==selected_major;
+		}
 		}
 		
 		if (request.status == 200) {
