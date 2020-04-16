@@ -46,7 +46,7 @@ function getMajorInfo(selected_major){
 		var data=JSON.parse(request.responseText);
 		
 		collect_major=data.filter(getMajor)
-		function getMajor(item){
+		function getMajor(major){
 		return item.major==selected_major;
 		}
 		
