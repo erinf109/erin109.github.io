@@ -40,8 +40,8 @@
 	
 	
 	<script>
-	var app = angular.module ('gradepointAppApp', []);
-	app.controller ('gradepointCtrltrl', function ($scope, $http) {
+	var app = angular.module ('gradepointApp', []);
+	app.controller ('gradepointCtrl', function ($scope, $http) {
 	
 	$http.get("students.json")
 	.then (function (response) {
